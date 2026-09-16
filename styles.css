@@ -169,9 +169,9 @@ h4 { font-weight: 500; }
 .weighting-guide { display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px; margin-top: 26px; }
 .weighting-guide dt { display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 500; }
 .panel-key { display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; width: 22px; height: 22px; border-radius: 50%; font: 10px var(--mono); }
-.panel-success { background: #dcebe2; color: #206d52; }
+.panel-success { background: #dce8ef; color: #205d7d; }
 .panel-iw { background: #dce8ef; color: #266389; }
-.panel-bc { background: #e9dfef; color: #75498c; }
+.panel-bc { background: #dcebe6; color: #216b65; }
 .weighting-guide dd { font-size: 12px; color: var(--muted); line-height: 1.75; margin: 10px 0 0 32px; }
 .results-layout { display: grid; grid-template-columns: .75fr 2fr; gap: 65px; margin-top: 50px; }
 .result-spotlights { display: flex; flex-direction: column; justify-content: space-between; padding-block: 10px 22px; }

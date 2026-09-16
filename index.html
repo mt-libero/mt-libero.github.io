@@ -76,7 +76,7 @@
       </div>
       <div class="scaling-block" id="scaling">
         <div><p class="eyebrow">PARALLEL ENVIRONMENT SCALING</p><h3>More parallel<br> experience.</h3><p>Increasing parallel replicas improves endpoint success within the shared training-time budget in this experiment.</p><a class="text-link" href="assets/parallel_env_scaling.csv" download>Experiment data <span aria-hidden="true">↗</span></a></div>
-        <figure><a href="assets/parallel_env_scaling.pdf" target="_blank" rel="noopener" aria-label="Open the parallel environment scaling figure as a PDF"><img src="assets/parallel_env_scaling.png" width="1473" height="513" loading="lazy" alt="Evaluation success versus parallel environment count, and training reward versus wall-clock hours. Success rises from 5.5% at 40 environments to 83.4% at 16,000."></a><figcaption>40–16,000 environments · Checkpoints near a 15.68-hour budget · One evaluation seed. The accompanying data records 1 GPU up to 4,000 environments, 4 GPUs at 8,000, and 8 GPUs at 16,000.</figcaption></figure>
+        <figure><a href="assets/parallel_env_scaling.pdf" target="_blank" rel="noopener" aria-label="Open the parallel environment scaling figure as a PDF"><img src="assets/parallel_env_scaling.png" width="1980" height="670" loading="lazy" alt="Evaluation success versus parallel environment count, and training reward versus wall-clock hours. Success rises from 5.5% at 40 environments to 83.4% at 16,000."></a><figcaption>40–16,000 environments · Checkpoints near a 15.68-hour budget · One evaluation seed. The accompanying data records 1 GPU up to 4,000 environments, 4 GPUs at 8,000, and 8 GPUs at 16,000.</figcaption></figure>
       </div>
       <div class="suite-showcase">
         <div class="subsection-heading"><h3>Task diversity, in motion.</h3><span class="eyebrow">Selected successful rollouts</span></div>
@@ -114,12 +114,12 @@
           <figure>
             <div class="weighting-figure-tools"><span class="weighting-scroll-hint">Scroll sideways to compare all three panels →</span><a class="text-link" href="assets/vision_weight_heatmaps.pdf" target="_blank" rel="noopener">Open original PDF <span aria-hidden="true">↗</span></a></div>
             <div class="weighting-figure-scroll" role="region" aria-label="Task weighting heatmaps; scroll horizontally on smaller screens" tabindex="0">
-              <img src="assets/vision_weight_heatmaps.png" width="2520" height="792" loading="lazy" decoding="async" alt="Three heatmaps across 40 tasks and 0–20,000 PPO iterations: training success, raw importance weights, and adaptive behavior-cloning coefficients. Lagging tasks retain higher importance weights, while all BC coefficients reach 0.1 by the dashed line at 12,500 iterations.">
+              <img src="assets/vision_weight_heatmaps.png" width="2520" height="894" loading="lazy" decoding="async" alt="Three heatmaps across 40 tasks and 0–20,000 PPO iterations: training success, raw importance weights, and adaptive behavior-cloning coefficients. Lagging tasks retain higher importance weights, while all BC coefficients reach 0.1 by the dashed line at 12,500 iterations.">
             </div>
             <dl class="weighting-guide">
-              <div><dt><span class="panel-key panel-success">a</span>Learning progress</dt><dd>Each row is one task. Darker green indicates higher training success.</dd></div>
+              <div><dt><span class="panel-key panel-success">a</span>Learning progress</dt><dd>Each row is one task. Darker blue indicates higher training success.</dd></div>
               <div><dt><span class="panel-key panel-iw">b</span>Continued task priority</dt><dd>Blue indicates higher raw IW. Lagging tasks retain priority after BC annealing ends.</dd></div>
-              <div><dt><span class="panel-key panel-bc">c</span>Relaxing teacher guidance</dt><dd>Purple fades as BC weakens. Every task reaches the 0.1 floor by 12.5k iterations.</dd></div>
+              <div><dt><span class="panel-key panel-bc">c</span>Relaxing teacher guidance</dt><dd>Teal fades as BC weakens. Every task reaches the 0.1 floor by 12.5k iterations.</dd></div>
             </dl>
             <figcaption class="figure-note">Visual IW-ABC, training seed 2; 100-iteration averages. Success is a training moving average. IW and BC are reconstructed from logged success; IW is shown before minibatch normalization. Dashed lines mark the end of ABC annealing.</figcaption>
           </figure>
