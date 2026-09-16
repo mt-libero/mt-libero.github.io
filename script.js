@@ -133,6 +133,35 @@
     });
   });
 
+  const learnerButtons = [...document.querySelectorAll('[data-learner]')];
+  const entryPanels = [...document.querySelectorAll('[data-entry-panel]')];
+  const entryMethods = [...document.querySelectorAll('[data-entry-method]')];
+  function selectLearner(button) {
+    const panel = document.getElementById(button.getAttribute('aria-controls'));
+    learnerButtons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+    entryPanels.forEach(item => { item.hidden = item !== panel; });
+    entryMethods.forEach(method => {
+      const selected = method.dataset.entryMethod === panel.dataset.entryPanel;
+      method.classList.toggle('is-active', selected);
+      method.querySelector('.entry-indicator').hidden = !selected;
+    });
+  }
+  learnerButtons.forEach((button, index) => {
+    button.disabled = false;
+    button.addEventListener('click', () => selectLearner(button));
+    button.addEventListener('keydown', event => {
+      let next;
+      if (event.key === 'ArrowRight') next = (index + 1) % learnerButtons.length;
+      else if (event.key === 'ArrowLeft') next = (index - 1 + learnerButtons.length) % learnerButtons.length;
+      else if (event.key === 'Home') next = 0;
+      else if (event.key === 'End') next = learnerButtons.length - 1;
+      else return;
+      event.preventDefault();
+      learnerButtons[next].focus();
+      selectLearner(learnerButtons[next]);
+    });
+  });
+
   const navLinks = [...document.querySelectorAll('.site-header nav a')];
   const sections = navLinks.map(link => document.querySelector(link.getAttribute('href')));
   let queued = false;

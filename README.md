@@ -4,7 +4,10 @@ A GPU-parallel benchmark for heterogeneous multi-task reinforcement learning.
 
 Static HTML, CSS, JavaScript, and project media.
 
-Anonymous project preview. Code and dataset links are placeholders.
+Anonymous project website.
+
+- Code: https://github.com/mt-libero/MT-Libero
+- Dataset: https://huggingface.co/datasets/mt-libero/MT-Libero-Dataset
 
 ## Preview
 
